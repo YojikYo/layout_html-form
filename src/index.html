@@ -13,7 +13,87 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="POST">
+    <fieldset>
+      <legend>Personal information</legend>
+        <label>Name:
+          <input type="text" name="name" autocomplete="off" maxlength="20" autofocus required>
+        </label>
+        <br>
+        <label>Surname:
+          <input type="text" name="surname" autocomplete="off" maxlength="20" required>
+        </label>
+        <br>
+        <label>How old are You?
+          <input type="number" name="age" data-qa="field-value" value="12">
+        </label>
+        <br>
+        <label>Full date of birthday:
+          <input type="date" name="birthday">
+        </label>
+        <br>
+        <label>I accept the terms of the agreement
+          <input type="checkbox" name="agreed">
+        </label>
+    </fieldset>
+    <fieldset>
+      <legend>Registration</legend>
+        <label>E-mail:
+          <input type="email" name="email" placeholder="email@example.com" data-qa="field-placeholder">
+        </label>
+        <br>
+        <label>Password:
+          <input type="password" name="password" min="6" max="6" pattern="[A-Za-z]{3}[0-9]{3}" title="Three letter and three digit">
+        </label>
+    </fieldset>
 
-<script type="text/javascript" src="./main.js"></script>
+    <fieldset>
+      <legend>An interesting fact about You!</legend>
+        <label>Do You like cats?
+          <input type="radio" name="like_for_cats" value="yes" checked>
+          <input type="radio" name="like_for_cats" value="no">
+        </label>
+        <br>
+        <label>What is Your favorite color?
+          <input type="color" name="favorite_color">
+        </label>
+        <br>
+        <label>What time do You go bed?
+          <input type="time" name="time_for_sleep">
+        </label>
+        <br>
+        <label>What is Your favorite brand of cars?
+          <select name="cars">
+            <option value="ford">Ford</option>
+            <option value="volvo">Volvo</option>
+            <option value="sens">Sens</option>
+            <option value="audi">Audi</option>
+            <option value="bmw">BMW</option>
+            <option value="Porshe" selected>Porshe</option>
+            <option value="lamborgini" selected>Lamborgini</option>
+          </select>
+        </label>
+        <br>
+        <label>How do You rate our work?
+          <input type="range" name="work_rate" value="100" min="0" max="100" step="5">
+        </label>
+    </fieldset>
+    <fieldset>
+      <legend>Additional info</legend>
+        <label>Comments:
+          <input type="textarea" name="comments" rows="2" cols="40" autocomplete="off">
+        </label>
+        <br>
+        <label>Would You recommend us?
+          <select name="0ur_support" size="1" multiple>
+            <option value="yes">Yes</option>
+            <option value="I want it">Yes, ofcourse</option>
+            <option value="great">Great idea!</option>
+          </select>
+        </label>
+    </fieldset>
+    <input type="submit" formnovalidate formtarget="_blank" name="submit">
+  </form>
+  <script type="text/javascript" src="./main.js"></script>
 </body>
 </html>
